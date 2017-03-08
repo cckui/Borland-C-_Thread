@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/03/07 21:03:23.000.361,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2017/03/07 21:03:23.000.349,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/03/07 21:03:55.000.190,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/03/07 21:03:55.000.201,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2017/03/08 08:52:27.215,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/03/08 08:52:27.224,=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2017/03/08 08:53:30.517,F:\程式測試區\ThreadTest\frmMain.dfm=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2017/03/08 08:53:30.517,F:\程式測試區\ThreadTest\frmMain.h=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>2017/03/08 08:53:30.517,F:\程式測試區\ThreadTest\frmMain.cpp=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2017/03/08 08:53:45.792,F:\程式測試區\ThreadTest\ThreadProjectPCH1.h=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/03/08 08:53:55.549,F:\程式測試區\ThreadTest\ThreadProject.cbproj=C:\Users\hansdome\Documents\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>2017/03/08 08:59:25.431,=F:\程式測試區\ThreadTest\Unit1.cpp</Transaction>
+    <Transaction>2017/03/08 09:00:27.990,F:\程式測試區\ThreadTest\TGaugeThread.cpp=F:\程式測試區\ThreadTest\Unit1.cpp</Transaction>
+    <Transaction>2017/03/08 09:00:27.990,F:\程式測試區\ThreadTest\TGaugeThread.h=F:\程式測試區\ThreadTest\Unit1.h</Transaction>
+  </Transactions>
+</BorlandProject>

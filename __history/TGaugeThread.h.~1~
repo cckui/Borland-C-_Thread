@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#ifndef TGaugeThreadH
+#define TGaugeThreadH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+//---------------------------------------------------------------------------
+class TGaugeThread : public TThread
+{
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall TGaugeThread(bool CreateSuspended);
+};
+//---------------------------------------------------------------------------
+#endif

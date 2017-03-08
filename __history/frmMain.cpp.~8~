@@ -1,0 +1,65 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "frmMain.h"
+#include "TGaugeThread.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "iAngularGauge"
+#pragma link "iComponent"
+#pragma link "iCustomComponent"
+#pragma link "iGaugeComponent"
+#pragma link "iPositionComponent"
+#pragma link "iScaleComponent"
+#pragma link "iVCLComponent"
+#pragma resource "*.dfm"
+TMainForm *MainForm;
+//---------------------------------------------------------------------------
+__fastcall TMainForm::TMainForm(TComponent* Owner)
+	: TForm(Owner)
+{
+	TestThread = new TGaugeThread(false);
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::FormActivate(TObject *Sender)
+{
+	OperateShow(false);
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::OperateShow(bool bThreadRun)
+{
+	btnThreadStart->Enabled = !bThreadRun ;
+	btnThreadPause->Enabled = bThreadRun ;
+	btnclose->Enabled = !bThreadRun ;
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::btnThreadStartClick(TObject *Sender)
+{
+	OperateShow(true);
+	TestThread->Resume();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::btnThreadPauseClick(TObject *Sender)
+{
+	OperateShow(false);
+	TestThread->Suspend();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::btncloseClick(TObject *Sender)
+{
+	TestThread->Terminate();
+	Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::BitBtn1Click(TObject *Sender)
+{
+	TestThread->WaitFor();
+}
+//---------------------------------------------------------------------------
+void __fastcall TMainForm::StopClick(TObject *Sender)
+{
+	TestThread->ThreadControlFlagSet(true);
+}
+//---------------------------------------------------------------------------

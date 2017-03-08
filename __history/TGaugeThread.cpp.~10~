@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+
+#include <System.hpp>
+#pragma hdrstop
+
+#include "TGaugeThread.h"
+#include "frmMain.h"
+#pragma package(smart_init)
+//---------------------------------------------------------------------------
+
+//   Important: Methods and properties of objects in VCL can only be
+//   used in a method called using Synchronize, for example:
+//
+//      Synchronize(&UpdateCaption);
+//
+//   where UpdateCaption could look like:
+//
+//      void __fastcall TGaugeThread::UpdateCaption()
+//      {
+//        Form1->Caption = "Updated in a thread";
+//      }
+//---------------------------------------------------------------------------
+
+__fastcall TGaugeThread::TGaugeThread(bool CreateSuspended)
+	: TThread(CreateSuspended)
+{
+	bFDirection = true ;
+}
+//---------------------------------------------------------------------------
+void __fastcall TGaugeThread::Execute()
+{
+	NameThreadForDebugging(System::String(L"GaugeThread"));
+	//---- Place thread code here ----
+	while(true){
+		if(bFDirection)
+			MainForm->iAngularGauge1->Position++ ;
+		else
+			MainForm->iAngularGauge1->Position-- ;
+		if(MainForm->iAngularGauge1->Position >= MainForm->iAngularGauge1->PositionMax)
+			bFDirection = false ;
+		if(MainForm->iAngularGauge1->Position <= MainForm->iAngularGauge1->PositionMin)
+			bFDirection = true ;
+
+		Sleep(100);
+	}
+}
+//---------------------------------------------------------------------------

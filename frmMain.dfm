@@ -1,0 +1,102 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'MainForm'
+  ClientHeight = 473
+  ClientWidth = 768
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object iAngularGauge1: TiAngularGauge
+    Left = 176
+    Top = 104
+    Width = 249
+    Height = 201
+    Position = 45.000000000000000000
+    PositionMax = 100.000000000000000000
+    Label1Font.Charset = DEFAULT_CHARSET
+    Label1Font.Color = clWindowText
+    Label1Font.Height = -11
+    Label1Font.Name = 'Tahoma'
+    Label1Font.Style = []
+    Label2Font.Charset = DEFAULT_CHARSET
+    Label2Font.Color = clWindowText
+    Label2Font.Height = -11
+    Label2Font.Name = 'Tahoma'
+    Label2Font.Style = []
+    Label2OffsetY = -20
+    PanelFaceStyle = ipfsNone
+    PanelFaceOuterColor = clBlack
+    PanelFaceInnerColor = clWhite
+    PanelFaceSize = 15
+    TickLabelFont.Charset = DEFAULT_CHARSET
+    TickLabelFont.Color = clWindowText
+    TickLabelFont.Height = -11
+    TickLabelFont.Name = 'Tahoma'
+    TickLabelFont.Style = []
+    SectionEnd1 = 50.000000000000000000
+    SectionEnd2 = 75.000000000000000000
+    PositionMax_2 = 100.000000000000000000
+    SectionEnd1_2 = 50.000000000000000000
+    SectionEnd2_2 = 75.000000000000000000
+    SectionEnd3_2 = 0.000000000000000000
+    SectionEnd4_2 = 0.000000000000000000
+    Pointers = <
+      item
+        Color = clBlack
+        Style = 3
+        Position = 45.000000000000000000
+      end>
+  end
+  object btnThreadStart: TBitBtn
+    Left = 560
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'Start'
+    TabOrder = 1
+    OnClick = btnThreadStartClick
+  end
+  object btnThreadPause: TBitBtn
+    Left = 560
+    Top = 135
+    Width = 75
+    Height = 25
+    Caption = 'Pause'
+    TabOrder = 2
+    OnClick = btnThreadPauseClick
+  end
+  object btnclose: TBitBtn
+    Left = 560
+    Top = 166
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 3
+    OnClick = btncloseClick
+  end
+  object BitBtn1: TBitBtn
+    Left = 96
+    Top = 342
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 4
+    OnClick = BitBtn1Click
+  end
+  object Stop: TBitBtn
+    Left = 96
+    Top = 373
+    Width = 75
+    Height = 25
+    Caption = 'Stop'
+    TabOrder = 5
+  end
+end

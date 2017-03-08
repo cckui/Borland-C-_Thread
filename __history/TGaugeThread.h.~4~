@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#ifndef TGaugeThreadH
+#define TGaugeThreadH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+//---------------------------------------------------------------------------
+class TGaugeThread : public TThread
+{
+private:
+	bool bFDirection ;
+	bool bFThreadStop ;
+	void __fastcall UpdateCaption();
+	int FPosition ;
+protected:
+	void __fastcall Execute();
+public:
+	__fastcall TGaugeThread(bool CreateSuspended);
+
+	void __fastcall ThreadControlFlagSet(bool bThreadStop);
+};
+//---------------------------------------------------------------------------
+#endif
